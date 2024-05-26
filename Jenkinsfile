@@ -41,7 +41,7 @@ pipeline {
           }
 
           steps {
-            withSonarQubeEnv('sonar-server') {
+            withSonarQubeEnv('sonarserver') {
                sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=darey_web_app \
                    -Dsonar.projectName=darey_web_app \
                    -Dsonar.projectVersion=1.0 \
