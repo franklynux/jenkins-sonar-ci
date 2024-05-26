@@ -34,16 +34,16 @@ pipeline {
             }
         }
 
-        /*stage('SonarQube: Code Analysis') {
+        stage('SonarQube: Code Analysis') {
           
 		  environment {
-             scannerHome = tool 'sonar-scan'
+             scannerHome = tool 'sonar-scanner'
           }
 
           steps {
-            withSonarQubeEnv('jenkins_sonar') {
-               sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=thedevcloud \
-                   -Dsonar.projectName=thedevcloud-app \
+            withSonarQubeEnv('sonar-server') {
+               sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=darey_web_app \
+                   -Dsonar.projectName=darey_web_app \
                    -Dsonar.projectVersion=1.0 \
                    -Dsonar.sources=src/ \
                    -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
@@ -54,7 +54,7 @@ pipeline {
             }
         }
         
-        stage ("Quality Gate") {
+        /*stage ("Quality Gate") {
             steps {
                 timeout(time: 10, unit: 'MINUTES') {
                     waitForQualityGate abortPipeline: true
