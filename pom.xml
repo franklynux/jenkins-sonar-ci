@@ -5,12 +5,12 @@
     <artifactId>vprofile</artifactId>
     <packaging>war</packaging>
     <version>v2</version>
-    <name>Visualpathit VProfile Webapp</name>
+    <name>darey_web_app</name>
     <url>http://maven.apache.org</url>
     <properties>
-        <spring.version>4.2.0.RELEASE</spring.version>
-        <spring-security.version>4.0.2.RELEASE</spring-security.version>
-        <spring-data-jpa.version>1.8.2.RELEASE</spring-data-jpa.version>
+        <spring.version>6.1.8.RELEASE</spring.version>
+        <spring-security.version>6.3.0.RELEASE</spring-security.version>
+        <spring-data-jpa.version>3.3.0.RELEASE</spring-data-jpa.version>
         <hibernate.version>4.3.11.Final</hibernate.version>
         <hibernate-validator.version>5.2.1.Final</hibernate-validator.version>
         <mysql-connector.version>8.0.22</mysql-connector.version>
@@ -84,9 +84,9 @@
         </dependency>
 
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.11.0-M2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -182,7 +182,7 @@
 	            <plugin>
                      <groupId>org.apache.maven.plugins</groupId>
                      <artifactId>maven-war-plugin</artifactId>
-                     <version>3.2.2</version>
+                     <version>3.4.0</version>
                     </plugin>
  		    <plugin>
  		        <groupId>org.jacoco</groupId>
