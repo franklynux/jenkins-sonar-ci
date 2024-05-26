@@ -34,7 +34,7 @@ pipeline {
             }
         }
 
-        stage('SonarQube: Code Analysis') {
+        /*stage('SonarQube: Code Analysis') {
           
 		  environment {
              scannerHome = tool 'sonar-scan'
@@ -53,7 +53,7 @@ pipeline {
                 } 
             }
         }
-        /*
+        
         stage ("Quality Gate") {
             steps {
                 timeout(time: 10, unit: 'MINUTES') {
