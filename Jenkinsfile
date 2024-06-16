@@ -4,7 +4,7 @@ pipeline {
 	
 	tools {
         maven "Maven3"
-        jdk "OracleJDK11"
+        jdk "OracleJDK17"
     }
 	
 	
